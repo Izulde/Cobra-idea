@@ -69,7 +69,7 @@ public class BatchClientDemo {
             
             if (response != null) {
                 System.out.println("Batch operation completed in " + String.format("%.2f", durationMs) + " ms");
-                System.out.println("Plain response: " + new String(response.getPlainData() != null ? response.getPlainData() : new byte[0]));
+                System.out.println("Plain response: " + new String(response.getReply() != null ? response.getReply() : new byte[0]));
                 if (response.getConfidentialData() != null) {
                     System.out.println("Confidential responses: " + response.getConfidentialData().length);
                     for (int i = 0; i < response.getConfidentialData().length; i++) {

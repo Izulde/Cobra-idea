@@ -199,7 +199,7 @@ public class BatchClientProxy {
         
         // Step 2: Share the aggregated data using the VSS scheme
         // This generates ONE polynomial and ONE commitment for the entire batch
-        OpenPublishedShares openShares = confidentialityScheme.share(
+        EncryptedPublishedShares openShares = confidentialityScheme.share(
                 aggregatedData, Mode.LARGE_SECRET);
         
         // Create encrypted shares per server
